@@ -5,6 +5,10 @@ const ja = {
   'en': 'English',
   'ja': '日本語',
 
+  // OG
+  'title': 'BAUES',
+  'description': '私たちは専門性の高い建築の知識や技術を誰もが簡単に使える社会を目指しています',
+
   // Top
   'catch': 'Connect Engineering Empower Everyone',
   'sub-catch': '私たちは専門性の高い建築の知識や技術を誰もが簡単に使える社会を目指しています',

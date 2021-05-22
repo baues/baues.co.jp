@@ -5,7 +5,11 @@ const en: typeof ja = {
   'en': 'English',
   'ja': '日本語',
 
-      // Top
+  // OG
+  'title': 'BAUES',
+  'description': 'We make architectural engineering universally useful.',
+
+  // Top
   'catch': 'Connect Engineering Empower Everyone',
   'sub-catch': 'We make architectural engineering universally useful.',
   'see-our-products': 'See our products',

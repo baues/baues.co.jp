@@ -1,35 +1,39 @@
 import Head from 'next/head';
+import { useRouter } from 'next/router';
 import Home from 'src/views/Home';
 import { Top } from 'src/Images';
+import { useI18n } from 'src/i18n';
+import { HOST, SITE_NAME, THEME_COLOR, FB_APP_ID, FB_PAGE_ID, TWITTER_ID } from 'src/constants';
 
 export default function Index() {
+  const { t } = useI18n();
+  const { locale } = useRouter();
+  const path = locale === 'ja' ? '' : '/en';
+
   return (
     <>
       <Head>
         <meta key="viewport" name="viewport" content="height=device-height, width=device-width, initial-scale=1, minimum-scale=1" />
-        <title key="title">BAUES</title>
-        <meta
-          key="description"
-          name="description"
-          content="みんなの反応で進化する建築ソーシャルメディアBAUES（バウエス）。ニュース、イベント、論考、作品等、あらゆる建築情報が集まり、つながり、発展していきます。建築を、みんなの考えを、自分の想いを。もっと知って、もっと遠くに届けよう。"
-        />
-        <meta key="og:title" property="og:title" content="BAUES" />
+        <meta key="application-name" name="application-name" content={SITE_NAME} />
+        <meta key="theme-color" name="theme-color" content={THEME_COLOR} />
+        <link key="icon" rel="icon" href="/favicon.ico" />
+        <link key="manifest" rel="manifest" href="/manifest.json" />
+        <title key="title">{t('title')}</title>
+        <meta key="description" name="description" content={t('description')} />
+        <meta key="og:title" property="og:title" content={t('title')} />
         <meta key="og:type" property="og:type" content="article" />
-        <meta key="og:site_name" property="og:site_name" content="BAUES" />
-        <meta
-          key="og:description"
-          property="og:description"
-          content="みんなの反応で進化する建築ソーシャルメディアBAUES（バウエス）。ニュース、イベント、論考、作品等、あらゆる建築情報が集まり、つながり、発展していきます。建築を、みんなの考えを、自分の想いを。もっと知って、もっと遠くに届けよう。"
-        />
+        <meta key="og:site_name" property="og:site_name" content={SITE_NAME} />
+        <meta key="og:description" property="og:description" content={t('description')} />
         <meta key="og:image" property="og:image" content={Top} />
-        <meta key="og:locale" property="og:locale" content="ja_JP" />
-        <meta key="fb:app_id" property="fb:app_id" content="331619160596063" />
-        <meta key="fb:pages" property="fb:pages" content="130407134318451" />
-        <meta key="twitter:card" name="twitter:card" content="summary" />
-        <meta key="twitter:image" name="twitter:image" content={`https://baues.co.jp${Top}`} />
-        <meta key="twitter:site" name="twitter:site" content="@BAUES_IO" />
-        <meta key="twitter:creator" name="twitter:creator" content="@BAUES_IO" />
+        <meta key="og:locale" property="og:locale" content={locale} />
+        <meta key="fb:app_id" property="fb:app_id" content={FB_APP_ID} />
+        <meta key="fb:pages" property="fb:pages" content={FB_PAGE_ID} />
+        <meta key="twitter:card" name="twitter:card" content="summary_large_image" />
+        <meta key="twitter:image" name="twitter:image" content={`${HOST}${Top}`} />
+        <meta key="twitter:site" name="twitter:site" content={TWITTER_ID} />
+        <meta key="twitter:creator" name="twitter:creator" content={TWITTER_ID} />
         <meta key="twitter:app:country" name="twitter:app:country" content="JP" />
+        <link key="canonical" rel="canonical" href={`${HOST}${path}`} />
       </Head>
       <Home />
     </>
