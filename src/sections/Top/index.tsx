@@ -14,7 +14,7 @@ const Top: React.VFC = () => {
             </div>
 
             <div className="max-w-3xl mx-auto">
-              <p className="text-xl text-gray-600 mb-8" data-aos="fade-zoom-in" data-aos-delay="300">
+              <p className="text-xl text-gray-300 mb-8" data-aos="fade-zoom-in" data-aos-delay="300">
                 {t('sub-catch')}
               </p>
               <div className="max-w-xs mx-auto sm:max-w-none sm:flex sm:justify-center" data-aos="fade-zoom-in" data-aos-delay="300">
