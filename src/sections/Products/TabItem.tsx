@@ -6,7 +6,7 @@ interface Props {
   href: string;
   tabKey: number;
   tab: number;
-  src: string;
+  src: string | StaticImageData;
   alt: string;
 }
 
@@ -27,7 +27,7 @@ const Products: React.VFC<Props> = ({ href, tabKey, tab, src, alt }) => {
     >
       <a href={href} target="_blank" onMouseOver={() => setHover(true)} onMouseOut={() => setHover(false)}>
         <div className={`relative inline-flex bg-gray-900 p-4 rounded ${hover && 'opacity-50'}`}>
-          <Image className="md:max-w-none mx-auto rounded" src={src} alt={alt} width="500" height="250" />
+          <Image className="md:max-w-none mx-auto rounded" src={src} alt={alt} width="500" height="250" placeholder="blur" />
         </div>
         <div className={`absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 ${hover ? 'opacity-100' : 'opacity-0'}`}>
           <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
