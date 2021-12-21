@@ -35,3 +35,24 @@ button:focus {
     }
   }
 }
+
+/* width */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.6);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #111827;
+  border-radius: 4px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #DC2626;
+}
