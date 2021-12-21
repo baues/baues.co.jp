@@ -43,16 +43,16 @@ button:focus {
 
 /* Track */
 ::-webkit-scrollbar-track {
-  background: rgba(0, 0, 0, 0.6);
+  background: #111827;
 }
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: #111827;
+  background: #DC2626;
   border-radius: 4px;
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: #DC2626;
+  background: #1d4ed8;
 }
