@@ -31,8 +31,6 @@ const Footer: React.VFC = () => {
           <div className="sm:col-span-6 md:col-span-3 lg:col-span-2">
             <h6 className="text-gray-800 font-medium mb-2">{t('links')}</h6>
             <ul className="text-sm">
-              <InternalLinkItem href="https://blog.baues.io">{t('blog')}</InternalLinkItem>
-              <InternalLinkItem href="https://slack.baues.io">{t('community')}</InternalLinkItem>
               <InternalLinkItem href="https://baues.io/contact">{t('contact')}</InternalLinkItem>
             </ul>
           </div>
